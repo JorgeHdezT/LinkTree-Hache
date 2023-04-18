@@ -2,7 +2,8 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #FFAFCC;
+    /*background-color: #343434;*/
+    background-color: #242424;
   }
   
   .wrapper {
@@ -15,19 +16,36 @@ body {
   #Imagen {
     z-index: -1;
     position: absolute;
-    top: 0%;
-    left: -20%;
-    width: 1520px;
-    height: 1500px;
-    overflow: hidden
+    width: 1080;
+    height: 1080px;
+    overflow: hidden;
+    top: -5%;
+    left: -5%;
   }
   
   #Personaje {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.4;
-    transform: scaleX(-1)
+    opacity: 0.3;
+  } 
+  
+  #Imagen2 {
+    z-index: -1;
+    position: absolute;
+    width: 1080px;
+    height: 1080px;
+    overflow: hidden;
+    top: -5%;
+    left: 49%;
+  }
+  #Personaje2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    transform: scaleX(-1);
+
   }  
   .profile-image {
     margin-top: 20px;
@@ -35,8 +53,9 @@ body {
     width: 200px;
     height: 200px;
     object-fit: cover;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2), 0 0 20px rgba(0, 200, 255, 0.501), 0 0 80px white;
+    box-shadow: 0 5px 10px rgb(0, 0, 0);
   }
+  
   
   .profile-text {
     font-family: sans-serif;
@@ -46,21 +65,10 @@ body {
     font-size: 60px;
     color: white;
     font-weight: bold;
-    margin: 0;
+    margin-top: 15px;
 
-    animation: bounce 2s infinite;
-  }
+    text-shadow: 0 5px 20px rgb(0, 0, 0);
 
-  @keyframes bounce {
-    0% {
-        text-shadow: 0 5px 10px rgba(0,0,0,0.2), 0 0 10px rgb(215, 0, 143);
-    }
-    50% {
-        text-shadow: 0 5px 10px rgba(0,0,0,0.2), 0 0 10px rgb(0, 158, 215);
-    }
-    100% {
-        text-shadow: 0 5px 10px rgba(0,0,0,0.2), 0 0 10px rgb(255, 54, 121);
-    }
   }
   
   .linktree {
@@ -81,7 +89,7 @@ body {
     font-family: sans-serif;
     font-weight: bold;
     color: white;
-    text-shadow: 0 0 5px rgb(0, 140, 255), 0 0 5px rgb(0, 140, 255);
+    text-shadow: 0 0 20px rgb(0, 0, 0), 0 0 10px rgb(255, 255, 255);
     background-color: rgba(255, 255, 255, 0);
     border: 3px solid white;
     width: 200px;
@@ -90,7 +98,7 @@ body {
   }
   
   .linktree a:hover {
-    background-color: #ff8fa4;
+    background-color: #00e5ff76;
     color: white;
     transform: translateY(-5px);
     box-shadow: 0 5px 10px rgba(0,0,0,0.2), 0 0 10px white, 0 0 10px white, 0 0 50px white;
@@ -99,11 +107,11 @@ body {
 
   @media screen and (max-width: 768px) {
     #Imagen {
-      width: 120%;
-      height: 120%;
-      top: 40%;
-      left: -20%;
-      opacity: 30%;
+      width: 100%;
+      height: 100%;
+      top: 20%;
+      left: 00%;
+      opacity: 20%;
     }
 
     .linktree {
