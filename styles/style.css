@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -69,32 +73,135 @@ body {
     text-shadow: 0 5px 20px rgb(0, 0, 0);
 
   }
+
+.Presentacion {
+    display: flex;
+    justify-content: center;
+    margin-top: -3%;
+}
+
+.contenidoPresentacion {
+    display: flex;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 50px;
+    height: 100px;
+}
+
+#contenido {
+    height: 60px;
+    margin-top: 22px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+#bienvenido {
+    font-size: 50px;
+    font-family: arial;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-top: 20px;
+    text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 0px white;
+}
+
+.mensaje {
+    position: relative;
+    font-size: 50px;
+    font-family: arial;
+    color: rgb(0, 217, 255);
+    text-align: center;
+    animation: animacionsaludo infinite alternate-reverse;
+    animation-duration: 6s;
+    text-shadow: 0 0 10px rgb(0, 255, 208), 0 0 10px rgb(0, 0, 0);
+}
+
+@keyframes animacionsaludo {
+  0% {
+      top: -378px;
+  }
+
+  15% {
+      top: -378px;
+  }
+
+  20% {
+      top: -269px;
+  }
+
+  40% {
+      top: -269px;
+  }
+
+  45% {
+      top: -162px;
+  }
+
+  65% {
+      top: -162px;
+  }
+
+  70% {
+      top: -53px;
+  }
+
+  90% {
+      top: -53px;
+  }
+
+  100% {
+      top: -53px;
+  }
+}
   
   .linktree {
     display: flex;
-    margin-top: -40px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
     margin-bottom: 92px;
   }
-  
+
+  .icon {
+    width: 50px;
+    float: left;
+    margin-top: 1.5%;
+    margin-left: 1.5%;
+    transition: all 0.5s;
+  }
+
   .linktree a {
-    margin: 20px;
-    padding: 15px 20px;
+    margin: 15px;
     border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid white;
+    width: 1000px;
+    text-align: center;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    display: inline-block;
+    backdrop-filter: blur(5px);
+    margin-left: -10px;
+  }
+
+  .textoLink {
     text-decoration: none;
     font-size: 24px;
     font-family: sans-serif;
     font-weight: bold;
     color: white;
     text-shadow: 0 0 20px rgb(0, 0, 0), 0 0 10px rgb(255, 255, 255);
-    background-color: rgba(255, 255, 255, 0);
-    border: 3px solid white;
-    width: 200px;
-    text-align: center;
     transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    display: inline-block;
+    margin-left: -45px;
+  }
+
+  #HacheLogo {
+    width: 50px;
+    float: left;
+    margin-top: 1.5%;
+    margin-left: 1.5%;
+
   }
   
   .linktree a:hover {
@@ -103,56 +210,129 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 5px 10px rgba(0,0,0,0.2), 0 0 10px white, 0 0 10px white, 0 0 50px white;
     transition-delay: 0.1s;
+    width: 500px;
+  }
+  .linktree a:hover .icon {
+    margin-top: 2.6%;
+    margin-left: 1.5%;
   }
 
-@media screen and (max-width: 735px) {
+/* Regla para pantallas con un ancho máximo de 600px */
+@media only screen and (max-width: 600px) {
   #Imagen {
     width: 100%;
-    height: 100%;
-    top: 20%;
-    left: 00%;
+    height: auto;
+    top: -10%;
+    left: -100%;
+    width: 300%;
     opacity: 20%;
   }
 
-  .linktree {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  #Imagen2 {
+    display: hidden;
   }
 
-  .linktree a {
-    margin: 20px;
-    padding: 15px 20px;
-    border-radius: 100px;
-    text-decoration: none;
-    font-size: 18px;
-    font-family: sans-serif;
-    font-weight: bold;
-    color: white;
-    text-shadow: 0 0 5px rgb(0, 140, 255), 0 0 5px rgb(0, 140, 255);
-    background-color: rgba(255, 255, 255, 0);
-    border: 3px solid white;
-    width: 180px;
-    text-align: center;
-    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  .profile-image {
+    width: 150px;
+    height: 150px;
   }
 
   .profile-text {
-    font-size: 40px;
-    margin-top: 20px;
+    font-size: 30px;
+    margin-top: 10px;
+  }
+
+  .Presentacion {
+    flex-direction: column;
+    margin-top: -8%;
+  }
+
+  .contenidoPresentacion {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  #contenido {
+    margin-top: 7px;
+    height: 50px;
+  }
+
+  #bienvenido {
+    font-size: 25px;
+    margin-top: 15px;
+  }
+
+  .mensaje {
+    font-size: 25px;
+    top: -15px;
+  }
+
+  .linktree {
+    margin-top: -5%;
+  }
+
+  .linktree a {
+    width: 80%;
+    margin: 10px;
+  }
+
+  .linktree a:hover {
+    width: 220px;
+  }
+
+  #HacheLogo {
+    width: 40px;
+    padding-left: 2px;
+    padding-top: 3.5px;
+  }
+
+  .icon {
+    width: 35px;
+    padding-left: 2px;
+    padding-top: 3.5px;
+  }
+
+  .textoLink {
+    font-size: 18px;
+    margin-left: 0;
+  }
+
+  @keyframes animacionsaludo {
+    0% {
+      top: -15px;
+    }
+  
+    15% {
+      top: -15px;
+    }
+  
+    20% {
+      top: -72px;
+    }
+  
+    40% {
+      top: -72px;
+    }
+  
+    45% {
+      top: -132px;
+    }
+  
+    65% {
+      top: -132px;
+    }
+  
+    70% {
+      top: -189px;
+    }
+  
+    90% {
+      top: -189px;
+    }
+  
+    100% {
+      top: -189px;
+    }
   }
 }
-
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
