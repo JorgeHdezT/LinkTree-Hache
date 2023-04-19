@@ -58,6 +58,36 @@ body {
     object-fit: cover;
     box-shadow: 0 5px 10px rgb(0, 0, 0);
   }
+
+  #pingu {
+    position: absolute;
+    left: 44.5%;
+    top: 1%;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background-color: #242424;
+    box-shadow: 0 5px 10px rgb(0, 0, 0);
+    display: none;
+  }
+
+  .profile-image:hover+#pingu {
+    display: block;
+  }
+
+  @keyframes perfilanimado {
+    0% {
+      transform: rotate(0deg);
+      box-shadow: 0 0px 20px rgb(0, 238, 255), 0 0px 20px rgb(0, 238, 255);
+
+
+    }
+    100% {
+      transform: rotate(360deg);
+      box-shadow: 0 0px 20px rgb(0, 238, 255), 0 0px 20px rgb(0, 238, 255);
+
+    }
+  }
   
   
   .profile-text {
@@ -111,7 +141,7 @@ body {
     font-family: arial;
     color: rgb(0, 217, 255);
     text-align: center;
-    animation: animacionsaludo infinite alternate-reverse;
+    animation: animacionsaludo infinite linear;
     animation-duration: 6s;
     text-shadow: 0 0 10px rgb(0, 255, 208), 0 0 10px rgb(0, 0, 0);
 }
@@ -237,6 +267,17 @@ body {
     height: 150px;
   }
 
+  #pingu {
+    position: absolute;
+    left: 130px;
+    top: 21px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgb(0, 0, 0);
+    z-index: 1;
+  }
+
   .profile-text {
     font-size: 30px;
     margin-top: 10px;
@@ -266,6 +307,7 @@ body {
   .mensaje {
     font-size: 25px;
     top: -15px;
+    margin-right: 5px;
   }
 
   .linktree {
@@ -275,6 +317,11 @@ body {
   .linktree a {
     width: 80%;
     margin: 10px;
+  }
+
+  .linktree p {
+    position: relaive;
+    margin-left: -20px;
   }
 
   .linktree a:hover {
@@ -316,23 +363,160 @@ body {
     }
   
     45% {
-      top: -132px;
+      top: -125px;
     }
   
     65% {
-      top: -132px;
+      top: -125px;
     }
   
     70% {
-      top: -189px;
+      top: -178px;
     }
   
     90% {
-      top: -189px;
+      top: -178px;
     }
   
     100% {
-      top: -189px;
+      top: -178px;
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+
+  #Imagen {
+    width: 100%;
+    height: auto;
+    top: -10%;
+    left: -100%;
+    width: 300%;
+    opacity: 20%;
+  }
+
+  #Imagen2 {
+    display: hidden;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  #pingu {
+    position: absolute;
+    left: 113px;
+    top: 21px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #242424;
+    box-shadow: 0 5px 10px rgb(0, 0, 0);
+    backdrop-filter: blur(5px);
+  }
+
+  .profile-text {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+
+  .Presentacion {
+    margin-left: 20px;
+    margin-top: -8%;
+  }
+
+  .contenidoPresentacion {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  #contenido {
+    margin-top: 7px;
+    height: 50px;
+  }
+
+  #bienvenido {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  .mensaje {
+    font-size: 20px;
+    top: -18px;
+  }
+
+  .linktree {
+    margin-top: -5%;
+  }
+
+  .linktree a {
+    width: 80%;
+    margin: 10px;
+  }
+
+  .linktree p {
+    position: relaive;
+    margin-left: -30px;
+  }
+
+  .linktree a:hover {
+    width: 220px;
+  }
+
+  #HacheLogo {
+    width: 40px;
+    padding-left: 2px;
+    padding-top: 3.5px;
+  }
+
+  .icon {
+    width: 35px;
+    padding-left: 2px;
+    padding-top: 3.5px;
+  }
+
+  .textoLink {
+    font-size: 18px;
+    margin-left: 0;
+  }
+
+  @keyframes animacionsaludo {
+    0% {
+      top: -11px;
+    }
+  
+    15% {
+      top: -11px;
+    }
+  
+    20% {
+      top: -55px;
+    }
+  
+    40% {
+      top: -55px;
+    }
+  
+    45% {
+      top: -95px;
+    }
+  
+    65% {
+      top: -95px;
+    }
+  
+    70% {
+      top: -140px;
+    }
+  
+    90% {
+      top: -140px;
+    }
+  
+    100% {
+      top: -140px;
     }
   }
 }

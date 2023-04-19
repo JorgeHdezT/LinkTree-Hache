@@ -18,9 +18,18 @@
 
         <div class="header">
             <div class="profile-info">
-              <img src="imagenes/hache2.png" class="profile-image">
-              <p class="profile-text">HACHE'S LINKS</p>
-            </div>
+                <img src="imagenes/hache2.png" class="profile-image" data-audio="musica/pingu.mp3">
+                <img src="imagenes/nootnoot.png" id="pingu">
+                <p class="profile-text">HACHE'S LINKS</p>
+              
+                <script>
+                  var imagen = document.querySelector(".profile-image");
+                  imagen.addEventListener("mouseover", function() {
+                    var sonido = new Audio(imagen.getAttribute("data-audio"));
+                    sonido.play();
+                  });
+                </script>
+              </div>
           </div>
 
           <div class="Presentacion">
