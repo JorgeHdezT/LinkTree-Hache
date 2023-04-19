@@ -106,6 +106,7 @@ body {
   }
 
 .Presentacion {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,22 +114,23 @@ body {
 }
 
 .contenidoPresentacion {
+    position: relative;
     display: flex;
-    float: left;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 41%;
-    height: 100px;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+
 }
 
 #contenido {
     height: 60px;
     margin-top: 22px;
-    margin-left: 10px;
     overflow: hidden;
+
 }
 
 #bienvenido {
+
     font-size: 50px;
     font-family: arial;
     color: rgb(255, 255, 255);
@@ -143,7 +145,7 @@ body {
     font-family: arial;
     color: rgb(0, 217, 255);
     text-align: center;
-    animation: animacionsaludo infinite linear;
+    animation: animacionsaludo infinite linear alternate;
     animation-duration: 6s;
     text-shadow: 0 0 10px rgb(0, 255, 208), 0 0 10px rgb(0, 0, 0);
 }
@@ -250,143 +252,9 @@ body {
   }
 
 /* Regla para pantallas con un ancho máximo de 600px */
-@media only screen and (max-width: 600px) {
-  #Imagen {
-    width: 100%;
-    height: auto;
-    top: -10%;
-    left: -100%;
-    width: 300%;
-    opacity: 20%;
-  }
 
-  #Imagen2 {
-    display: hidden;
-  }
 
-  .profile-image {
-    width: 150px;
-    height: 150px;
-  }
-
-  #pingu {
-    position: absolute;
-    left: 130px;
-    top: 21px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    box-shadow: 0 5px 10px rgb(0, 0, 0);
-    z-index: 1;
-  }
-
-  .profile-text {
-    font-size: 30px;
-    margin-top: 10px;
-  }
-
-  .Presentacion {
-    flex-direction: column;
-    margin-top: -8%;
-  }
-
-  .contenidoPresentacion {
-    width: 97.5%;
-    height: auto;
-    margin-bottom: 20px;
-  }
-
-  #contenido {
-    margin-top: 7px;
-    height: 50px;
-  }
-
-  #bienvenido {
-    font-size: 25px;
-    margin-top: 15px;
-  }
-
-  .mensaje {
-    font-size: 25px;
-    top: -15px;
-    margin-right: 5px;
-  }
-
-  .linktree {
-    margin-top: -5%;
-  }
-
-  .linktree a {
-    width: 80%;
-    margin: 10px;
-  }
-
-  .linktree p {
-    position: relaive;
-    margin-left: -20px;
-  }
-
-  .linktree a:hover {
-    width: 220px;
-  }
-
-  #HacheLogo {
-    width: 40px;
-    padding-left: 2px;
-    padding-top: 3.5px;
-  }
-
-  .icon {
-    width: 35px;
-    padding-left: 2px;
-    padding-top: 3.5px;
-  }
-
-  .textoLink {
-    font-size: 18px;
-    margin-left: 0;
-  }
-
-  @keyframes animacionsaludo {
-    0% {
-      top: -15px;
-    }
-  
-    15% {
-      top: -15px;
-    }
-  
-    20% {
-      top: -72px;
-    }
-  
-    40% {
-      top: -72px;
-    }
-  
-    45% {
-      top: -125px;
-    }
-  
-    65% {
-      top: -125px;
-    }
-  
-    70% {
-      top: -178px;
-    }
-  
-    90% {
-      top: -178px;
-    }
-  
-    100% {
-      top: -178px;
-    }
-  }
-}
-
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
 
   #Imagen {
     width: 100%;
@@ -424,17 +292,15 @@ body {
   }
 
   .Presentacion {
-    width: 99%;
-    height: 100%;
-
-    display:flex;
-    align-items: center;
+    position: relative;
     justify-content: center;
+    align-items: center;
+
   }
 
   .contenidoPresentacion {
     height: auto;
-    width: 90%;
+    width: 100%;
     margin-bottom: 20px;
 
   }
@@ -442,16 +308,19 @@ body {
   #contenido {
     margin-top: 7px;
     height: 50px;
+
   }
 
   #bienvenido {
     font-size: 20px;
     margin-top: 15px;
+
   }
 
   .mensaje {
     font-size: 20px;
     top: -18px;
+
   }
 
   .linktree {
@@ -507,23 +376,23 @@ body {
     }
   
     45% {
-      top: -95px;
+      top: -102px;
     }
   
     65% {
-      top: -95px;
+      top: -102px;
     }
   
     70% {
-      top: -140px;
+      top: -147px;
     }
   
     90% {
-      top: -140px;
+      top: -147px;
     }
   
     100% {
-      top: -140px;
+      top: -147px;
     }
   }
 }
