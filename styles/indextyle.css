@@ -1,0 +1,165 @@
+:root {
+  --primary-gradient: -webkit-linear-gradient(#00d0ff, #001aff);
+  --glass-bg: rgba(255, 255, 255, 0.2);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --text-color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --glass-bg: rgba(0, 0, 0, 0.2);
+    --glass-border: rgba(0, 0, 0, 0.4);
+    --text-color: #fff;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --glass-bg: rgba(255, 255, 255, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --text-color: #000;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: var(--primary-gradient);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  backdrop-filter: blur(10px);
+  background: var(--glass-bg);
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100vh;
+
+  animation: appear 1s linear forwards;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  /* height: 50vh; */
+  background-image: url("../imagenes/pingu.jpg");
+  background-position: center;
+
+  background-size: cover;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.header #logo {
+  width: 35%;
+  height: 100%;
+  border-radius: 50%;
+  border: 5px solid var(--glass-bg);
+  backdrop-filter: blur(2px);
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.header i {
+  backdrop-filter: blur(2px);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.glass-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  padding: 10px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text-color);
+  backdrop-filter: blur(2px);
+  transition: background 0.3s;
+}
+
+.glass-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+.link-item {
+  text-decoration: none;
+  color: var(--text-color);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1rem;
+  backdrop-filter: blur(10px);
+  transition: background 0.3s;
+}
+
+.link-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive desktop */
+@media (min-width: 600px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .container {
+    height: auto;
+    transform: scale(150%);
+  }
+
+  .link-item {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HacheDev Links</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="Imagen">
+            <img src="imagenes/hachehueco.png" id="Personaje">
+        </div>
+        <div id="Imagen2">
+            <img src="imagenes/hachehueco.png" id="Personaje2">
+        </div>
+
+        <div class="header">
+            <div class="profile-info">
+                <img src="imagenes/hache2.png" class="profile-image" data-audio="musica/pingu.mp3">
+                <img src="imagenes/nootnoot.png" id="pingu">
+                <p class="profile-text">HACHE'S LINKS</p>
+              
+                <script>
+                  var imagen = document.querySelector(".profile-image");
+                  imagen.addEventListener("mouseover", function() {
+                    var sonido = new Audio(imagen.getAttribute("data-audio"));
+                    sonido.play();
+                  });
+                </script>
+              </div>
+          </div>
+
+        <div class="Presentacion">
+            <div class="contenidoPresentacion">
+                <h3 id="bienvenido">¡Bienvenid@! Soy  </h3>
+                <div id="contenido">
+                    <h3 class="mensaje">HACHE</h3>
+                    <h3 class="mensaje">ESTUDIANTE</h3>
+                    <h3 class="mensaje">ARTISTA</h3>
+                    <h3 class="mensaje">UN PINGÜINO</h3>
+                </div>
+                <h3 id="bienvenido"> !</h3>
+            </div>
+        </div>
+        
+        <div class="linktree">
+            <a href="https://jorgehdezt.github.io/HacheStore/HTML/sobreH.html">
+                <img src="imagenes/LogoSinFondoHD.png" id="HacheLogo">
+                <p class="textoLink">PAGINA WEB</p>
+                
+            </a>
+            <a href="https://www.instagram.com/hache_mapache/?hl=es">
+                <img src="imagenes/instagram.png" id="InstagramLogo" class="icon">
+                <p class="textoLink">INSTAGRAM</p>
+            </a>
+            <a href="https://twitter.com/HacheTTP_dev">
+                <img src="imagenes/twitter.png" id="TwitterLogo" class="icon">
+                <p class="textoLink">TWITTER</p>
+            </a>
+            <a href="https://www.tiktok.com/@hacheriot?lang=es">
+                <img src="imagenes/tiktok.png" id="TiktokLogo" class="icon">
+                <p class="textoLink">TIKTOK</p>
+            </a>
+            <a href="https://www.twitch.tv/hacheriot">
+                <img src="imagenes/twitch.png" id="TwitchLogo" class="icon">
+                <p class="textoLink">TWITCH</p>
+            </a>
+        </div>
+    </div>       
+</body>
+</html>
