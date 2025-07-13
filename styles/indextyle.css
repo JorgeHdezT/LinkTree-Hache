@@ -39,7 +39,7 @@ body {
   max-width: 400px;
   backdrop-filter: blur(10px);
   background: var(--glass-bg);
-  border-radius: 20px;
+  
   overflow: hidden;
   height: 100vh;
 
@@ -157,6 +157,7 @@ body {
   .container {
     height: auto;
     transform: scale(150%);
+    border-radius: 20px;
   }
 
   .link-item {
